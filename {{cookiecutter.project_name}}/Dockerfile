@@ -11,6 +11,9 @@ ENV PYTHONPATH=/app \
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Create logs directory
+RUN mkdir -p /app/logs
+
 # Copy project
 COPY . /app/
 
