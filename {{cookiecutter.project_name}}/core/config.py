@@ -1,9 +1,9 @@
 """Configuration handling."""
+
 import os
 from pathlib import Path
 
 import yaml
-from pydantic import Field
 
 from .settings import Settings
 

@@ -12,7 +12,7 @@ COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Install Ruff for linting
-RUN pip install --no-cache-dir ruff
+RUN pip install --no-cache-dir ruff~=0.11
 
 # Create logs directory
 RUN mkdir -p /app/logs

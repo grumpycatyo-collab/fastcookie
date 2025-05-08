@@ -1,4 +1,5 @@
 """{{cookiecutter.project_name}} package."""
+
 from pathlib import Path
 
 with open(Path(__file__).parent / "VERSION") as version_file:

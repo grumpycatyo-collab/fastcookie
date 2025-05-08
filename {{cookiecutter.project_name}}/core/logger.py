@@ -1,7 +1,7 @@
 """Logger configuration."""
+
 import os
 import sys
-from typing import Dict, List, Union
 
 from loguru import logger
 

@@ -3,6 +3,8 @@ from fastapi import APIRouter
 router = APIRouter(tags=["cookies"])
 
 """ Example endpoint to get `cookies`. """
+
+
 @router.get("/cookies")
 async def get_cookies():
     """Get cookies."""

@@ -1,7 +1,8 @@
 """Main application module."""
+
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
 
@@ -10,6 +11,7 @@ from core.config import get_settings
 from core.logger import logger
 
 settings = get_settings()
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -41,6 +43,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/", include_in_schema=False)
 async def root_redirect():
     """Redirect root path to docs."""
@@ -53,4 +56,5 @@ logger.info(f"Application {settings.app_name} initialized")
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
