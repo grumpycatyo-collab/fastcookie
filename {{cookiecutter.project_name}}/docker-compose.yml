@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - API_ENV=development
+      - LOG_LEVEL=INFO
+      - SECRET_KEY=dev_secret_key_change_in_production
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload

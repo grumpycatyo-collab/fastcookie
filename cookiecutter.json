@@ -1,0 +1,11 @@
+{
+  "project_name": "fastapi_app",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_description": "A FastAPI application",
+  "author_name": "Your Name",
+  "author_email": "your.email@example.com",
+  "python_version": "3.11",
+  "_copy_without_render": [
+    ".gitignore"
+  ]
+}

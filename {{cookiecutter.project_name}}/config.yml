@@ -1,0 +1,21 @@
+# Application configuration
+app:
+  name: "{{cookiecutter.project_name}}"
+  description: "{{cookiecutter.project_description}}"
+
+# Environment configuration
+environment:
+  development:
+    debug: true
+    cors_origins:
+      - http://localhost
+      - http://localhost:8000
+  testing:
+    debug: true
+    cors_origins:
+      - http://localhost
+      - http://localhost:8000
+  production:
+    debug: false
+    cors_origins:
+      - https://example.com

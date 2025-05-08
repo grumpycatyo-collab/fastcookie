@@ -1,2 +1,2 @@
-# fastcookie
-cookiecutter template for FastAPI 
+fastcookie
+A cookiecutter template for FastAPI projects
